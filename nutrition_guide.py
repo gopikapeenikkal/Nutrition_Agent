@@ -27,10 +27,6 @@ def nutrition_agent(image:str):
         instruction = INSTRUCTIONS,
         structured_outputs=True,
         )
-        #run agent to get the response as a stream 
-        response = agent.run(
-            "analyse the product image",images = [image],stream=True   
-        )
 
        # Initialize response accumulator
         full_response = ""
