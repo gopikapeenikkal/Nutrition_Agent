@@ -5,7 +5,7 @@ from phi.model.google import Gemini
 from phi.tools.tavily import TavilyTools 
 import os
 from dotenv import load_dotenv
-from instructions import SYSTEM_PROMPT,INSTRUCTIONS
+from training import SYSTEM_PROMPT,INSTRUCTIONS
 from typing import Iterator 
 import json
 
