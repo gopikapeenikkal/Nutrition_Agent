@@ -21,7 +21,7 @@ app.add_middleware(
 class ImageRequest(BaseModel):
     image: str
 
-@app.post("/captured_image")
+@app.post("/api/captured_image")
 async def image_analysis(request: ImageRequest):
     async def generate_response() -> AsyncGenerator[str, None]:
         try:
