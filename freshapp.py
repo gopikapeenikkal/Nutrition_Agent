@@ -76,7 +76,7 @@ def instructions():
 
         # generating the input for the agent with the user inputs
         prompt = f"""
-                Based on the following user information, create a personalized diet plan using products list:
+                Based on the following user information, create a personalized diet plan using Freshivores products:
                 Gender: {gender}
                 Age: {age}
                 Weight gaining/loss/same: {weight_goal}
@@ -90,22 +90,21 @@ def instructions():
                 
                Create a detailed diet plan considering the following points:
                - Daily Caloric Requirements: Calculate based on the individual's activity level, weight, and health condition and show the requied calory requirement.
-               - Meal Plan: Design a meal plan that incorporates products from knowledge.
+               - Meal Plan Using Freshivores Products: Design a meal plan that incorporates Freshivores' range of products.
                - Meal Structure & Variety:
                   * Divide the meals in a day to 4 breakfast, lunch, mid day snak and dinner.
                   * mention the calory of each meal.
                   * Provide six different meal options to offer variety.
-               - Ingredient List: At the end of the diet plan, list all product list given in knowledge base used as ingredients in making the diet dishes.
+               - Ingredient List: At the end of the diet plan, list all Freshivores product list given in knowledge base used as ingredients in making the diet dishes.
                - User Feedback: Conclude by asking the user if they are satisfied with the plan or if they would like any modifications.
                - Ensure the plan is nutritionally balanced and practical.
                 
                 Format the response in a clear, structured way using markdown.
                 """
-        # Call the dietplan_agent       
+                
         diet_agent = dietplan_agent()
-        
         # Create a run with input
-        diet_agent.print_response(prompt, stream = True) 
+        diet_agent.print_response(prompt, stream = True)
         
     except Exception as e:
         print(f'Exception in function instruction --> {e}') 
